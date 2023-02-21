@@ -20,7 +20,7 @@ My social media
 </p>
 
 <p align="center">
-  <img alt="projeto social-media" src=".github/my-social-media-png" width="100%">
+  <img alt="projeto social-media" src=".github/my-social-media-ligth.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
