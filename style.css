@@ -34,6 +34,7 @@ body {
   */
   /*short code*/
   background: var(--bg-url) no-repeat top center/cover;
+  height:100vh;
 }
 body *{
   font-family: 'Inter', sans-serif;
@@ -41,8 +42,8 @@ body *{
 }
 
 #container-principal{
-  width: 360px;
-  heigth: 712px;
+  width: 100%;
+  max-width: 588px;
   margin:auto;
   margin: 56 auto 0 auto;
   padding: 0 24px;
@@ -74,8 +75,7 @@ body *{
 }
 
 .ligth #switch button{
-  right: 0;
-  left: initial;
+  animation: slide-pointer 0.5s forwards;
 }
 
 #switch button {
@@ -89,6 +89,12 @@ body *{
   left: 0;
   transform: translateY(-50%);
   z-index:1;
+
+  animation: slide-back 0.5s;
+}
+
+#switch button:hover{
+  outline: 8px solid var(--highligth-color);
 }
 
 #switch span{
@@ -162,5 +168,34 @@ footer a{
 
   text-decoration: none;
 }
+/*media queris*/
 
+@media (min-width 700px){
+  :root{
+    --bg-url: url(./img/bg-desktop.jpg);
+  }
+  .ligth{
+    --bg-url: url(./img/bg-desktop-ligth.jpg);
+  } 
+}
+
+/*animation*/
+
+@keyframes slide-pointer{
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slide-back{
+  from{
+    left:50%;
+  }
+  to{
+   left: 0; 
+  }
+}
 
